@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>madlib</title>
+            </head>
+    
+
+    <body>
+
+        
+        <h1>Mad Libs</h1>
+            <form id="myform">
+
+                <label for="noun1">pular noun:</label>
+         <input type="text" id="noun1"><br>
+                <label for="verb1">ing verb</label>
+                <input type="text" id="verb1"><br>
+                <label for="name1">name:</label>
+                <input type="text" id="name1"><br>
+                <label for="yomama">Add a yo mama joke</label><br>
+                <input type="text" id="yomama"><br>
+                
+                <input type="submit" value="submit">submit</button>
+            </form>
+              <p id="madlib" class="madlib"></p>
+        
+     <script>
+        var form = document.getElementById("myform");
+            form.addEventListener("submit", function(event){
+            event.preventDefault();
+
+      var noun1 = document.getElementById("noun1").value;
+
+      var verb1 = document.getElementById("verb1").value;
+
+
+      var name1 = document.getElementById("name1").value;
+      
+      var yomama = document.getElementById("yomama").value;
+
+
+      var madlib = "johnny when to the market to get " + noun1 + " as he was " + verb1 + " to get there he meet " + name1 + " --- " + yomama + "."; 
+
+      var formcontents=document.getElementById("madlib");
+      formcontents.innerHTML="johnny when to the market to get " + noun1 + " .  as he was " + verb1 + " to get there he meet " + name1 + ". and he said " + yomama + "."; 
+      
+});
+         
+         
+         
+         </script>   
+
+
+  
+
+    </body>
+</html>
